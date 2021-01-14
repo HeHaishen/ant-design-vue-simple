@@ -1,0 +1,105 @@
+@import "~ant-design-vue/es/style/themes/default.less";
+
+.ant-pro-global-header-index-right {
+  margin-right: 8px;
+
+  &.ant-pro-global-header-index-dark {
+    .ant-pro-global-header-index-action {
+      color: hsla(0, 0%, 100%, .85);
+
+      &:hover {
+        background: #1890ff;
+      }
+    }
+  }
+
+  .ant-pro-account-avatar {
+    .antd-pro-global-header-index-avatar {
+      margin: ~'calc((@{layout-header-height} - 24px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .menu {
+    .anticon {
+      margin-right: 8px;
+    }
+
+    .ant-dropdown-menu-item {
+      min-width: 100px;
+    }
+  }
+}
+/*自定义布局样式 */
+.c-basic-layout{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.c-basic-top{
+  width:100%;
+  height:60px;
+  background:#1890ff;
+  display:flex;
+  line-height:60px;
+  padding:0 20px;
+  color:white;
+}
+
+.c-basic-toptitle{
+  display:flex;
+  width:246px;
+  img{
+    display:flex;
+    width:60px;
+    margin-right:12px;
+  }
+}
+
+.c-basic-top div h1{
+  color:white;
+}
+
+.c-change-aside{
+  font-size:22px;
+}
+.c-aside-icon{
+  cursor: pointer;
+}
+
+.c-basic-topmenu{
+  width:100%;
+  height:50px;
+  padding:0 20px;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom:2px #e8e8e8 solid;
+  .ant-menu{
+    border-bottom:0px #e8e8e8 solid;
+  }
+}
+.ant-pro-sider-menu-logo{
+  display:none;
+}
+
+.c-top-listtext{
+  // font-weight: bold;
+  font-size:16px;
+  color:#1890ff;
+}
+
+.ant-pro-basicLayout-content{
+  margin: 0;
+}
+.ant-pro-basicLayout-children-content-wrap{
+  width:100%;
+  height:100%;
+}
+

@@ -1,0 +1,257 @@
+@import "~ant-design-vue/lib/style/index";
+
+// The prefix to use on all css classes from ant-pro.
+@ant-pro-prefix             : ant-pro;
+@ant-global-sider-zindex    : 106;
+@ant-global-header-zindex   : 105;
+/* 行内块元素 */
+html,body{
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -webkit-font-smoothing: grayscale;
+    -moz-osx-font-smoothing:antialiased;
+}
+img,input {
+    border: 0 none;
+    outline-style: none;
+    padding: 0;
+    vertical-align: top;
+}
+/* 行内元素 */
+body,ul,dl,ol,p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+/* 行内元素 */
+a {
+    text-decoration: none;
+}
+/* 全局内容样式 */
+.c-content{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    padding:10px;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.c-content-inner{
+    width:100%;
+    height:100%;
+    background:white;
+    padding:0 10px 0 10px;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    .c-content-title{
+        width:100%;
+        height:38px;
+        border-bottom:1px #e8e8e8 solid;
+        display:flex;
+        padding-top:11px;
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        .c-title-type{
+            display: block;
+            height:16px;
+            width:4px;
+            background:#1890ff;
+            margin:0 4px 0 8px;
+        }
+        .c-title-text{
+            font-size:14px;
+            color: black;
+            font-weight: bold;
+            line-height:16px;
+        }
+    }
+    .contentDetail{
+        width:100%;
+        height: calc(100% - 38px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+.c-add-form{
+    margin-top:20px;
+}
+
+.c-modal-btn{
+  width:100%;
+  display:flex;
+  justify-content: flex-end;
+  button{
+      margin-left:18px;
+  }
+}
+.c-content-tables{
+    width:100%;
+    height:auto;
+}
+
+.c-form-sleftitle{
+    width:100%;
+    height:48px;
+    line-height: 48px;
+    border-bottom:1px #e8e8e8 solid;
+    font-size:16px;
+    color:black;
+    font-weight: bold;
+    padding: 0 22px;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.contentDetail::-webkit-scrollbar{
+    width:6px;
+  }
+  .contentDetail::-webkit-scrollbar-thumb{
+    background:#aaa;
+    width:6px;
+  }
+  *::-webkit-scrollbar{
+    height:8px;
+    width:5px;
+    border-radius:50% 50%;
+  }
+  *::-webkit-scrollbar-thumb{
+    background:#aaa;
+    width:5px;
+  }
+
+  .c-content-search{
+      width:100%;
+      height:auto;
+      margin-bottom:10px;
+  }
+
+  .c-content-table{
+      width:100%;
+      height:auto;
+  }
+
+  .date-picker-noline .ant-form-item-control-wrapper .ant-form-item-control{
+    line-height: 36px;
+}
+
+.ant-form .ant-form-item {
+    margin-bottom: 5px!important;
+}
+/**
+* 数据查询表单统一样式
+*/
+.query-form {
+  .ant-form-inline {
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 24px;
+      margin-right: 0;
+
+      .ant-form-item-control-wrapper {
+        flex: 1 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      > .ant-form-item-label {
+        line-height: 32px;
+        padding-right: 8px;
+        width: auto;
+      }
+      .ant-form-item-control {
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .btns {
+    display: block;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    text-align: right;
+
+    .ant-btn{
+      margin:auto 3px;
+    }
+  }
+}
+
+.c-lineform-data{
+    margin-top:5px;
+    .ant-form-item-label label{
+        top:0px;
+    }
+}
+.ant-form-item-label label{
+    top:4px;
+}
+/* 
+  table-表格样式覆盖
+*/
+.ant-table-thead > tr > th{
+  padding:10px 8px;
+}
+.ant-table-tbody > tr > td{
+  padding:8px 8px;
+}
+.ant-table-thead > tr > th{
+  // border-right: 1px #e8e8e8 solid;
+}
+.ant-table-thead > tr > th  > span > div > span{
+  font-weight: bold;
+}
+/* 统计页-标题 */
+.c-statistics-title{
+  width:100%;
+  font-size:28px;
+  font-weight: bold;
+  text-align: center;
+}
+/* 列表状态 */
+.c-status-style{
+  display: inline-block;
+  width: 6px;
+  height:6px;
+  border-radius: 50% 50%;
+  -o-border-radius: 50% 50%;
+  -ms-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+}
+.c-status-blue{
+  background:#1890ff;
+}
+.c-status-cyan{
+  background:#00d3c8;
+}
+.c-status-green{
+  background:#00a854;
+}
+ .c-status-red{
+  background:#f04134;
+}
+.c-status-yello {
+  background:#f8bf21;
+}
+
+
+
