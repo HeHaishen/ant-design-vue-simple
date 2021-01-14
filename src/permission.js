@@ -4,7 +4,7 @@
  * @Autor: hehaishen
  * @LastEditors: hehaishen
  * @Date: 2020-12-24 18:13:00
- * @LastEditTime: 2021-01-12 12:07:54
+ * @LastEditTime: 2021-01-14 16:57:34
  */
 import router from './router'
 import store from './store'
@@ -69,8 +69,6 @@ router.beforeEach((to, from, next) => {
               message: '错误',
               description: '请求用户信息失败，请重试'
             })
-            console.log(error)
-            debugger
             // 失败时，获取用户信息失败时，调用登出，来清空历史保留信息
             store.dispatch('Logout').then(() => {
               next({ path: loginRoutePath, query: { redirect: to.fullPath } })
@@ -84,31 +82,18 @@ router.beforeEach((to, from, next) => {
   } else {
     if (allowList.includes(to.name)) {
       // 在免登录名单，直接进入
-      // next()
-      try {
+      next()
+      /* try {
         if(to.query && Object.keys(to.query).length && Object.keys(to.query)[0].split('token=')[1]){
           store.dispatch('verificationTokens',{token:Object.keys(to.query)[0].split('token=')[1]}).then((res)=>{
             console.log('persiom',res)
             if(res.success){
-              // debugger
               const roles = res.result && res.result.role
-              // generate dynamic router
               store.dispatch('GenerateRoutes', { roles }).then(() => {
                 // 根据roles权限生成可访问的路由表
                 // 动态添加可访问路由表
-                
                 router.addRoutes(store.getters.addRouters)
                 next({ path: '/' })
-                // next({ path: defaultRoutePath })
-                // 请求带有 redirect 重定向时，登录自动重定向到该地址
-                /* const redirect = decodeURIComponent(from.query.redirect || to.path)
-                if (to.path === redirect) {
-                  // set the replace: true so the navigation will not leave a history record
-                  next({ ...to, replace: true })
-                } else {
-                  // 跳转到目的路由
-                  next({ path: redirect })
-                } */
               })
             }else{
               next()
@@ -119,7 +104,7 @@ router.beforeEach((to, from, next) => {
         }
       } catch (error) {
         next()
-      }
+      } */
     } else {
       next({ path: loginRoutePath, query: { redirect: to.fullPath } })
       NProgress.done() // if current page is login will not trigger afterEach hook, so manually handle it
